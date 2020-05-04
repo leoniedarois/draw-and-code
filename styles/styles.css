@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background: #C2ACF9;
+    height: 100vh;
+}
+#particles-js {
+    position: absolute;
+    height: calc(100vh - 10px);
+    width: 100vw;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.backgroundSVG {
+    width: 431px;
+    height: 420px;
+    background: white;
+}
