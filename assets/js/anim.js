@@ -109,17 +109,21 @@ particlesJS('particles-js', {
 // PARALLAX PART
 let scene = document.getElementById('scene');
 let parallaxInstance = new Parallax(scene);
+parallaxInstance.invert(false, false);
 
 // GSAP PART
 TweenLite.defaultEase = Linear.easeNone;
 
 let rideau = new TimelineMax({repeat: -1, yoyo: true});
-rideau.to("#RIDEAU", .5, { y: 0, x: -1});
+rideau.to("#RIDEAU", .7, { y: 0, x: -1});
 
 let lights = new TimelineMax({repeat: -1, yoyo: true});
-lights.to("#LUMIERES", 2, { opacity: 0.8 });
-lights.to("#LUMIERES", 2, { y: 2, x: -3 });
+lights.to("#LUMIERES", 1.5, { y: 2, x: -3 });
+lights.to("#LUMIERES", .8, { opacity: 0.4 });
 
-let test = new TimelineMax({repeat: -1, yoyo: true});
-test.to("#bras_mec", .5, { y: 0, x: -1});
+let bras = new TimelineMax({repeat: -1, yoyo: true});
+bras.to("#bras_mec, #reflet_main, #reflet_main-2", .8, { y: 0, x: -1});
+
+let tete = new TimelineMax({repeat: -1, yoyo: true});
+tete.to("#tete_mec, #cheveux_mec, #cheveux_sous_oreille_mec", 1, { y: 0, x: -.8, rotation: -5});
 
