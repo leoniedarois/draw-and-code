@@ -3,6 +3,7 @@ body {
     background: #C2ACF9;
     height: 100vh;
 }
+
 #particles-js {
     position: absolute;
     height: calc(100vh - 10px);
@@ -16,8 +17,25 @@ body {
     height: 100%;
 }
 
+.svg {
+    width: 431px;
+    height: 420px;
+}
+
 .backgroundSVG {
     width: 431px;
     height: 420px;
     background: white;
+}
+
+/* Mobile version */
+@media (max-width: 600px) {
+    .svg {
+        width: 201px;
+        height: 190px;
+    }
+    .backgroundSVG {
+        width: 201px;
+        height: 190px;
+    }
 }
