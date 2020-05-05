@@ -117,9 +117,23 @@ TweenLite.defaultEase = Linear.easeNone;
 let rideau = new TimelineMax({repeat: -1, yoyo: true});
 rideau.to("#RIDEAU", .7, { y: 0, x: -1});
 
-let lights = new TimelineMax({repeat: -1, yoyo: true});
-lights.to("#LUMIERES", 1.5, { y: 2, x: -3 });
-lights.to("#LUMIERES", .8, { opacity: 0.4 });
+let lights = new TimelineMax({
+    repeat: -1,
+    yoyo: true
+});
+
+let lights2 = new TimelineMax({
+    repeat: -1,
+    yoyo: true
+});
+
+lights
+    .set('.circle', {scale : 0.7, transformOrigin: 'center center'})
+    .to(".circle", 1.5, {scale : 1});
+
+lights2
+    .set('.circle-2', {scale : 1, transformOrigin: 'center center'})
+    .to(".circle-2", 1.5, {scale : 0.7});
 
 let bras = new TimelineMax({repeat: -1, yoyo: true});
 bras.to("#bras_mec, #reflet_main, #reflet_main-2", .8, { y: 0, x: -1});
