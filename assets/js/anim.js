@@ -114,30 +114,6 @@ parallaxInstance.invert(false, false);
 // GSAP PART
 TweenLite.defaultEase = Linear.easeNone;
 
-let rideau = new TimelineMax({repeat: -1, yoyo: true});
-rideau.to("#RIDEAU", .7, { y: 0, x: -1});
-
-let lights = new TimelineMax({
-    repeat: -1,
-    yoyo: true
-});
-
-let lights2 = new TimelineMax({
-    repeat: -1,
-    yoyo: true
-});
-
-lights
-    .set('.circle', {scale : 0.7, transformOrigin: 'center center'})
-    .to(".circle", 1.5, {scale : 1});
-
-lights2
-    .set('.circle-2', {scale : 1, transformOrigin: 'center center'})
-    .to(".circle-2", 1.5, {scale : 0.7});
-
-let bras = new TimelineMax({repeat: -1, yoyo: true});
-bras.to("#bras_mec, #reflet_main, #reflet_main-2", .8, { y: 0, x: -1});
-
-let tete = new TimelineMax({repeat: -1, yoyo: true});
-tete.to("#tete_mec, #cheveux_mec, #cheveux_sous_oreille_mec", 1, { y: 0, x: -.8, rotation: -5});
+let monstera = new TimelineMax({repeat: -1, yoyo: true});
+monstera.to("#monstera_grosse", .7, { y: -3, x: -5});
 
